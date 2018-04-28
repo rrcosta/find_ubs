@@ -5,19 +5,10 @@
 <table>
   <thead>
     <tr>
-      <th>Latitude</th>
-      <th>Longitude</th>
       <th>Cod munic</th>
-      <th>Cod cnes</th>
       <th>Name</th>
       <th>Address</th>
-      <th>Neighborhood</th>
       <th>City</th>
-      <th>Tel</th>
-      <th>Dsc estrut fisic ambiencia</th>
-      <th>Dsc adap defic fisic idosos</th>
-      <th>Dsc equipamentos</th>
-      <th>Dsc medicamentos</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -25,19 +16,10 @@
   <tbody>
     <% @originubs.each do |originub| %>
       <tr>
-        <td><%= originub.latitude %></td>
-        <td><%= originub.longitude %></td>
         <td><%= originub.cod_munic %></td>
-        <td><%= originub.cod_cnes %></td>
         <td><%= originub.name %></td>
         <td><%= originub.address %></td>
-        <td><%= originub.neighborhood %></td>
         <td><%= originub.city %></td>
-        <td><%= originub.tel %></td>
-        <td><%= originub.dsc_estrut_fisic_ambiencia %></td>
-        <td><%= originub.dsc_adap_defic_fisic_idosos %></td>
-        <td><%= originub.dsc_equipamentos %></td>
-        <td><%= originub.dsc_medicamentos %></td>
         <td><%= link_to 'Show', originub %></td>
         <td><%= link_to 'Edit', edit_originub_path(originub) %></td>
         <td><%= link_to 'Destroy', originub, method: :delete, data: { confirm: 'Are you sure?' } %></td>
