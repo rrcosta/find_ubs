@@ -1,0 +1,2 @@
+class Originub < ApplicationRecord
+end
