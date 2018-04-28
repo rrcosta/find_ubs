@@ -16,13 +16,14 @@ Desafio para encontrar uma UBS (Unidade Básica de Saúde) mais próximas de aco
 
 2. Vá ao diretório do projeto e execute
 
-  find_ubs$ bundle install
+  `find_ubs$ bundle install`
 
 3. Copie o conteúdo do arquivo .env.example para o arquivo .env e altere com as credenciais de seu ambiente local
 
-  find_ubs$ cp .env.example .env
+  `find_ubs$ cp .env.example .env`
 
-4. Faça o setup do banco de dados
+4. Faça o setup do banco de dados, rodando os dois comandos a seguir
 
-  find_ubs$ bin/rails db:setup
+  `find_ubs$ bin/rails db:setup`
+  `find_ubs$ bin/rails db:migrate`
 
