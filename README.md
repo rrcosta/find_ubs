@@ -18,7 +18,7 @@ Desafio para encontrar uma UBS (Unidade Básica de Saúde) mais próximas de aco
 
   find_ubs$ bundle install
 
-3. Copie o conteúdo do arquivo .env.example para o arquivo .env e altere com as credenciais de      seu ambiente local
+3. Copie o conteúdo do arquivo .env.example para o arquivo .env e altere com as credenciais de seu ambiente local
 
   find_ubs$ cp .env.example .env
 
