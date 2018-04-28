@@ -4,7 +4,7 @@ class OriginubsController < ApplicationController
   # GET /originubs
   # GET /originubs.json
   def index
-    @originubs = Originub.all
+    @originubs = Originub.all.page(params[:page])
   end
 
   # GET /originubs/1
@@ -69,6 +69,11 @@ class OriginubsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def originub_params
-      params.require(:originub).permit(:latitude, :longitude, :cod_munic, :cod_cnes, :name, :address, :neighborhood, :city, :tel, :dsc_estrut_fisic_ambiencia, :dsc_adap_defic_fisic_idosos, :dsc_equipamentos, :dsc_medicamentos)
+      params.require(:originub).permit(
+         :latitude, :longitude, :cod_munic, :cod_cnes,
+         :name, :address, :neighborhood, :city, :tel,
+         :dsc_estrut_fisic_ambiencia, :dsc_adap_defic_fisic_idosos,
+         :dsc_equipamentos, :dsc_medicamentos
+      )
     end
 end
