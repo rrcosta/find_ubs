@@ -1,0 +1,24 @@
+pt-BR:
+  activerecord:
+    models:
+      originub: Unidade Basica de Saúde
+    attributes:
+      originub:
+        latitude: Latitude
+        longitude: Longitude
+        cod_munic: Cod Municipio
+        cod_cnes: Cod CNES
+        name: Nome
+        address: Endereço
+        neighborhood: Bairro
+        city: Cidade
+        tel: Telefone
+        dsc_estrut_fisic_ambiencia: Estrutura Física
+        dsc_adap_defic_fisic_idosos: Adaptações para idosos
+        dsc_equipamentos: Equipamento Disponível
+        dsc_medicamentos: Medicamento Disponível
+  originub:
+    actions:
+      add: Adicionar UBS
+      edit: Editar UBS
+      back: Voltar
