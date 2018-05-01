@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+<br>
+
+<div class="ui internally celled grid">
+  <div class="row">
+    <div class="seven wide column">
+      <div>
+        <%= render 'shared/show_map' %>
+      </div>
+    </div>
+
+    <div class="eight wide column">
+        <p>
+          <strong>Name:</strong>
+          <%= @place.name %>
+        </p>
+
+        <p>
+          <strong>Address:</strong>
+          <%= @place.address %>
+        </p>
+
+        <p>
+          <strong>Latitude:</strong>
+          <%= @place.latitude %>
+        </p>
+
+        <p>
+          <strong>Longitude:</strong>
+          <%= @place.longitude %>
+        </p>
+    </div>
+  </div>
+</div>
+
+
+<%= link_to 'Edit', edit_place_path(@place) %> |
+<%= link_to 'Back', places_path %>

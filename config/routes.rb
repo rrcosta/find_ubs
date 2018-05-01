@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   resources :originubs
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  #  root to: 'originub#index'
+  resources :places do
+    collection do
+      put :get_locations
+    end
+  end
+  root 'places#index'
 end

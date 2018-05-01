@@ -1,0 +1,43 @@
+
+<%= form_with(model: place, local: true, class: 'ui form') do |form| %>
+  <% if place.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(place.errors.count, "error") %> prohibited this place from being saved:</h2>
+
+      <ul>
+      <% place.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <h4 class="ui dividing teal header">Dados</h4>
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address %>
+  </div>
+
+  <h4 class="ui dividing teal header">Dados Geográfico</h4>
+  <div class="two fields">
+    <div class="field">
+      <%= form.label :latitude %>
+      <%= form.text_field :latitude %>
+    </div>
+
+    <div class="field">
+      <%= form.label :longitude %>
+      <%= form.text_field :longitude %>
+    </div>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+<br>
