@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Originubs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cod munic</th>
+      <th>Name</th>
+      <th>Address</th>
+      <th>City</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @originubs.each do |originub| %>
+      <tr>
+        <td><%= originub.cod_munic %></td>
+        <td><%= originub.name %></td>
+        <td><%= originub.address %></td>
+        <td><%= originub.city %></td>
+        <td><%= link_to 'Show', originub %></td>
+        <td><%= link_to 'Edit', edit_originub_path(originub) %></td>
+        <td><%= link_to 'Destroy', originub, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Originub', new_originub_path %>

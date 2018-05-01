@@ -1,82 +1,88 @@
-<%= form_with(model: originub, local: true) do |form| %>
-  <% if originub.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(originub.errors.count, "error") %> prohibited this originub from being saved:</h2>
+<%= form_with(model: originub, local: true, class: 'ui form') do |form| %>
+    <% if originub.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(originub.errors.count, "error") %> prohibited this originub from being saved:</h2>
 
-      <ul>
-      <% originub.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+        <ul>
+        <% originub.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
 
-  
-  <div class="field">
-  <%= form.label :cod_munic %>
-  <%= form.number_field :cod_munic %>
-  </div>
-  
-  <div class="field">
-  <%= form.label :cod_cnes %>
-  <%= form.number_field :cod_cnes %>
-  </div>
-  
-  <div class="field">
-  <%= form.label :name %>
-  <%= form.text_field :name %>
-  </div>
-  
-  <div class="field">
-  <%= form.label :address %>
-  <%= form.text_field :address %>
-  </div>
-  
-  <div class="field">
-  <%= form.label :neighborhood %>
-  <%= form.text_field :neighborhood %>
-  </div>
-  
-  <div class="field">
-  <%= form.label :city %>
-  <%= form.text_field :city %>
-  </div>
-  
-  <div class="field">
-  <%= form.label :tel %>
-  <%= form.text_field :tel %>
-  </div>
-  
-  <div class="field">
-  <%= form.label :dsc_estrut_fisic_ambiencia %>
-  <%= form.text_field :dsc_estrut_fisic_ambiencia %>
-  </div>
-  
-  <div class="field">
-  <%= form.label :dsc_adap_defic_fisic_idosos %>
-  <%= form.text_field :dsc_adap_defic_fisic_idosos %>
-  </div>
-  
-  <div class="field">
-  <%= form.label :dsc_equipamentos %>
-  <%= form.text_field :dsc_equipamentos %>
-  </div>
-  
-  <div class="field">
-  <%= form.label :dsc_medicamentos %>
-  <%= form.text_field :dsc_medicamentos %>
-  </div>
-  
-  <div class="field ">
-    <%= form.label :latitude %>
-    <%= form.text_field :latitude %>
-  </div>
+      <h4 class="ui dividing header">Dados da UBS</h4>
+      <div class="tree fields">
+        <div class="field">
+          <%= form.label :cod_munic %>
+          <%= form.number_field :cod_munic %>
+        </div>
 
-  <div class="field">
-    <%= form.label :longitude %>
-    <%= form.text_field :longitude %>
-  </div>
-  
+        <div class="field">
+          <%= form.label :cod_cnes %>
+          <%= form.number_field :cod_cnes %>
+        </div>
+      </div>
+
+      <div class="field">
+        <%= form.label :name %>
+        <%= form.text_field :name %>
+      </div>
+
+      <div class="field">
+        <%= form.label :address %>
+        <%= form.text_field :address %>
+      </div>
+
+      <div class="field">
+        <%= form.label :neighborhood %>
+        <%= form.text_field :neighborhood %>
+      </div>
+
+      <div class="field">
+        <%= form.label :city %>
+        <%= form.text_field :city %>
+      </div>
+
+      <div class="field">
+        <%= form.label :tel %>
+        <%= form.text_field :tel %>
+      </div>
+
+      <h4 class="ui dividing header">Dados Geografico</h4>
+        <div class="two fields">
+          <div class="field ">
+            <%= form.label :latitude %>
+            <%= form.text_field :latitude %>
+          </div>
+
+          <div class="field">
+            <%= form.label :longitude %>
+            <%= form.text_field :longitude %>
+          </div>
+       </div>
+
+      <h4 class="ui dividing header">Pontuacao</h4>
+        <div class="field">
+          <%= form.label :dsc_estrut_fisic_ambiencia %>
+          <%= form.text_field :dsc_estrut_fisic_ambiencia %>
+        </div>
+
+        <div class="field">
+          <%= form.label :dsc_adap_defic_fisic_idosos %>
+          <%= form.text_field :dsc_adap_defic_fisic_idosos %>
+        </div>
+
+        <div class="field">
+          <%= form.label :dsc_equipamentos %>
+          <%= form.text_field :dsc_equipamentos %>
+        </div>
+
+        <div class="field">
+          <%= form.label :dsc_medicamentos %>
+          <%= form.text_field :dsc_medicamentos %>
+        </div>
+
   <div class="actions">
   <%= form.submit %>
   </div>
