@@ -18,6 +18,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'semantic-ui-sass'
 gem 'kaminari'
 gem 'font-awesome-rails'
+gem 'geokit-rails'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
