@@ -1,2 +1,8 @@
 @import 'semantic-ui';
 @import 'font-awesome';
+
+.truncate{
+	max-width: 220px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
