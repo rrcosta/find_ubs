@@ -1,33 +1,34 @@
-<p id="notice"><%= notice %></p>
+<div class="ui five column grid">
+<% @originubs.each do |originub| %>
+  <div class="column">
 
-<h1>Originubs</h1>
+    <div class='ui fluid cards'>
+      <div class='teal card'>
+        <div class='content'>
+          <div class='header'>
+            <%= originub.city %>
+          </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Cod munic</th>
-      <th>Name</th>
-      <th>Address</th>
-      <th>City</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+          <div class='meta'>
+            <%= originub.name %>
+          </div>
 
-  <tbody>
-    <% @originubs.each do |originub| %>
-      <tr>
-        <td><%= originub.cod_munic %></td>
-        <td><%= originub.name %></td>
-        <td><%= originub.address %></td>
-        <td><%= originub.city %></td>
-        <td><%= link_to 'Show', originub %></td>
-        <td><%= link_to 'Edit', edit_originub_path(originub) %></td>
-        <td><%= link_to 'Destroy', originub, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+          <div class="description">
+            <%= originub.address %><br>
+            <%= originub.cod_munic %><br>
+          </div>
 
-<br>
+          <div class="extra content">
+            <%= link_to 'Show', originub, class: 'right floated' %>
+            <br>
+            <%= link_to 'Edit', edit_originub_path(originub), class: 'right floated' %>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  <% end %>
+</div>
+
 
 <%= link_to 'New Originub', new_originub_path %>
