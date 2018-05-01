@@ -1,7 +1,10 @@
 <%= form_with(model: originub, local: true, class: 'ui form') do |form| %>
     <% if originub.errors.any? %>
       <div id="error_explanation">
-        <h2><%= pluralize(originub.errors.count, "error") %> prohibited this originub from being saved:</h2>
+        <h2>
+        <%= pluralize(originub.errors.count, "error") %>
+        prohibited this originub from being saved:
+        </h2>
 
         <ul>
         <% originub.errors.full_messages.each do |message| %>
@@ -11,7 +14,7 @@
       </div>
     <% end %>
 
-      <h4 class="ui dividing header">Dados da UBS</h4>
+      <h4 class="ui dividing teal header">Dados da UBS</h4>
       <div class="tree fields">
         <div class="field">
           <%= form.label :cod_munic %>
@@ -49,7 +52,7 @@
         <%= form.text_field :tel %>
       </div>
 
-      <h4 class="ui dividing header">Dados Geografico</h4>
+      <h4 class="ui dividing teal header">Dados Geográfico</h4>
         <div class="two fields">
           <div class="field ">
             <%= form.label :latitude %>
@@ -62,7 +65,7 @@
           </div>
        </div>
 
-      <h4 class="ui dividing header">Pontuacao</h4>
+      <h4 class="ui dividing teal header">Pontuação</h4>
         <div class="field">
           <%= form.label :dsc_estrut_fisic_ambiencia %>
           <%= form.text_field :dsc_estrut_fisic_ambiencia %>

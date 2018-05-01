@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-
+<h4 class="ui dividing teal header">Dados da UBS</h4>
 <p>
 <strong>Cod munic:</strong>
 <%= @originub.cod_munic %>
@@ -36,6 +36,18 @@
 <%= @originub.tel %>
 </p>
 
+<h4 class="ui dividing teal header">Dados Geográfico</h4>
+<p>
+  <strong>Latitude:</strong>
+  <%= @originub.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @originub.longitude %>
+</p>
+
+<h4 class="ui dividing teal header">Pontuação</h4>
 <p>
 <strong>Dsc estrut fisic ambiencia:</strong>
 <%= @originub.dsc_estrut_fisic_ambiencia %>
@@ -56,15 +68,8 @@
 <%= @originub.dsc_medicamentos %>
 </p>
 
-<p>
-  <strong>Latitude:</strong>
-  <%= @originub.latitude %>
-</p>
 
-<p>
-  <strong>Longitude:</strong>
-  <%= @originub.longitude %>
-</p>
 
 <%= link_to 'Edit', edit_originub_path(@originub) %> |
 <%= link_to 'Back', originubs_path %>
+
