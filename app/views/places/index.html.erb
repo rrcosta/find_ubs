@@ -30,15 +30,18 @@
   <%= content_tag :tbody, id: :places do %>
     <%= render @places %>
   <% end %>
-  
+
 </table>
 
-<br>
-
+<br><br>
 <%= link_to 'New Place', new_place_path %>
-<br>
-<br>
-<br>
-<%= content_tag :button, 'Obter Localização', class: 'ui small button ui teal basic button get_location' %>
-<br>
-<%= tag :div, class: 'location_results_list' %>
+<br><br>
+
+<div>
+  <%= content_tag :button, 'Obter Localização', class: 'ui small teal button get_location' %>
+</div>
+
+<br><br>
+<div>
+  <%= tag :div, class: 'location_results_list' %>
+</div>

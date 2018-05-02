@@ -62,10 +62,21 @@ class PlacesController < ApplicationController
   end
 
   def get_locations
-    url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=#{params[:latitude]},#{params[:longitude]}&radius=500&key=AIzaSyBPKkQD7imgDG1urIaEZ59a0u3tXNNYIcU"
-    http_call = open(url).read
-    response = JSON.parse(http_call, {:symbolize_names => true})
+    require 'open-uri'
+    require 'pry-byebug'
+    url = url_maps(params)
+    response = reponse_maps(open(url).read)
+
+    # binding.pry
     @locations = response[:results]
+  end
+
+  def url_maps(params)
+    url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=#{params[:latitude]},#{params[:longitude]}&radius=500&key=AIzaSyBPKkQD7imgDG1urIaEZ59a0u3tXNNYIcU"
+  end
+
+  def reponse_maps(http_call)
+    JSON.parse(http_call, {:symbolize_names => true})
   end
 
   private

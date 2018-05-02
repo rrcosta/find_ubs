@@ -18,7 +18,7 @@ $(document).on('turbolinks:load', @getPlaces)
 @createPlace = ->
   $('.location_results_list button').on 'click', (event) ->
     data = JSON.parse(JSON.stringify($(this).data('attributes')))
-    $.ajax '/places', 
+    $.ajax '/places',
       type: 'POST'
       dataType: 'script'
       data: {
@@ -31,5 +31,6 @@ $(document).on('turbolinks:load', @getPlaces)
       }
       success: (data, status) ->
         console.log 'Data: ' + data + '\nStatus: ' + status
+        console.log 'Data: ' + data
 
     event.preventDefault()
