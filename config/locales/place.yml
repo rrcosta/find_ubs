@@ -1,0 +1,15 @@
+pt-BR:
+  activerecord:
+    models:
+      placce: Local
+    attributes:
+      placce:
+        latitude: Latitude
+        longitude: Longitude
+        name: Nome
+        address: Endereço
+  placce:
+    actions:
+      add: Adicionar
+      edit: Editar
+      back: Voltar

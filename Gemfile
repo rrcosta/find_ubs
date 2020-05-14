@@ -19,6 +19,7 @@ gem 'semantic-ui-sass'
 gem 'kaminari'
 gem 'font-awesome-rails'
 gem 'geokit-rails'
+gem 'geocoder'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
